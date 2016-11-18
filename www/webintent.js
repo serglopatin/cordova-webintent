@@ -33,6 +33,14 @@
         }, 'WebIntent', 'hasExtra', [params]);
     };
 
+    WebIntent.prototype.clearUri = function(success, fail) {
+        return cordova.exec(function(args) {
+            success(args);
+        }, function(args) {
+            fail(args);
+        }, 'WebIntent', 'clearUri', []);
+    };
+
     WebIntent.prototype.getUri = function(success, fail) {
         return cordova.exec(function(args) {
             success(args);
